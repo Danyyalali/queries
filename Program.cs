@@ -150,6 +150,17 @@ namespace LINQMANIPULATION
 
                 List<Player> asd = context.Players.FromSqlRaw("SELECT * FROM Players Where age > 30").ToList();
                 Console.WriteLine(asd.Count());
+
+
+                //to delete the specific data from the records
+
+               /* var player1 = (from de in context.Players
+                              where de.name == "babar azam"
+                              select de).FirstOrDefault<Player>();
+                context.Players.Remove(player1);
+                context.SaveChanges();*/
+
+
             }
             List<Player> p;
             Program pg = new Program();
